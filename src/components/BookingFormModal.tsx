@@ -32,7 +32,7 @@ const BookingFormModal: React.FC<BookingFormModalProps> = ({
 
   const areAllFieldsFilled = useMemo(() => Object.values(formData).every((value) => value !== ''), [formData]);
 
-  const { createBooking, isLoading, error } = useBookingsStore();
+  const { createBooking, isLoading } = useBookingsStore();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,8 +43,8 @@ const BookingFormModal: React.FC<BookingFormModalProps> = ({
       });
       showToast('Booking created successfully!', 'success');
       onClose();
-    } catch (_error) {
-      showToast(error ?? '', 'error');
+    } catch (error) {
+      showToast(error as string, 'error');
     }
   };
 
