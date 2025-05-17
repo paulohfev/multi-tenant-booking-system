@@ -4,6 +4,7 @@ import InputField from './InputField';
 import { useBookingsStore } from '@/store/useBookingsStore';
 import { showToast } from '@/utils/showToast';
 import XIcon from './XIcon';
+import { getCurrentDate, getCurrentTime } from '@/utils/date';
 
 export type BookingFormModalProps = {
   service: Service;
@@ -60,6 +61,11 @@ const BookingFormModal: React.FC<BookingFormModalProps> = ({
 
   if (!isOpen) return null;
 
+  const minTime = formData.date === getCurrentDate() ? getCurrentTime() : undefined;
+
+  console.log('getCurrentTime', getCurrentTime());
+  console.log('getCurrentDate', getCurrentDate());
+
   return (
     <div className="fixed inset-0 bg-gray-500/20 backdrop-brightness-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg p-6 max-w-md w-full shadow-xl">
@@ -98,7 +104,7 @@ const BookingFormModal: React.FC<BookingFormModalProps> = ({
             type="date"
             value={formData.date}
             onChange={handleChange}
-            min={new Date().toISOString().split('T')[0]}
+            min={getCurrentDate()}
           />
 
           <InputField
@@ -107,6 +113,7 @@ const BookingFormModal: React.FC<BookingFormModalProps> = ({
             type="time"
             value={formData.time}
             onChange={handleChange}
+            min={minTime}
           />
 
           <div className="mt-6">

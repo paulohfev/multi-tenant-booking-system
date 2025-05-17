@@ -1,5 +1,5 @@
 import { Booking } from "@/types/Booking";
-import { formatDate } from "@/utils/formatDate";
+import { formatDate } from "@/utils/date";
 
 export type BookingCardProps = {
   booking: Booking;
