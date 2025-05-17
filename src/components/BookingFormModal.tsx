@@ -63,9 +63,6 @@ const BookingFormModal: React.FC<BookingFormModalProps> = ({
 
   const minTime = formData.date === getCurrentDate() ? getCurrentTime() : undefined;
 
-  console.log('getCurrentTime', getCurrentTime());
-  console.log('getCurrentDate', getCurrentDate());
-
   return (
     <div className="fixed inset-0 bg-gray-500/20 backdrop-brightness-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg p-6 max-w-md w-full shadow-xl">
