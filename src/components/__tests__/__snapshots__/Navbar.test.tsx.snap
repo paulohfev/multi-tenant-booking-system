@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar should match snapshot 1`] = `
+<div>
+  <nav
+    class="bg-white shadow-md fixed w-full top-0 z-50"
+  >
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    >
+      <div
+        class="flex justify-between items-center h-16"
+      >
+        <div
+          class="flex items-center"
+        >
+          <a
+            class="flex items-center text-gray-900 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+            href="/centers"
+          >
+            <div
+              class="flex-shrink-0"
+            >
+              <img
+                alt="Beauty Center"
+                data-nimg="1"
+                decoding="async"
+                height="32"
+                loading="lazy"
+                src="/logos/company.svg"
+                style="color: transparent;"
+                width="32"
+              />
+            </div>
+            <div
+              class="flex items-baseline space-x-4 ml-2"
+            >
+              Multi-tenant Booking System
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
