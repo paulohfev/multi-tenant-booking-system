@@ -1,10 +1,11 @@
-import { Center } from '../types/Center';
+import { Center } from '../types/Center'
 
 export const mockCenters: Center[] = [
   {
     id: '1-beauty-haven',
     name: 'Beauty Haven',
-    description: 'Your premier destination for beauty and wellness services. Experience luxury treatments in a serene environment.',
+    description:
+      'Your premier destination for beauty and wellness services. Experience luxury treatments in a serene environment.',
     logo: '/logos/beauty-haven.svg',
     services: 2,
   },
@@ -22,4 +23,4 @@ export const mockCenters: Center[] = [
     logo: '/logos/spa-paradise.svg',
     services: 2,
   },
-]; 
+]

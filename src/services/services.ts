@@ -1,8 +1,8 @@
-import { Service } from '@/types/Service';
-import { mockServices } from '@/data/mockServices';
-import { mockApiDelay } from '@/utils/mockApiDelay';
+import { Service } from '@/types/Service'
+import { mockServices } from '@/data/mockServices'
+import { mockApiDelay } from '@/utils/mockApiDelay'
 
 export const getServicesByCenterId = async (centerId: string): Promise<Service[]> => {
-  await mockApiDelay(1500);
-  return mockServices.filter(service => service.centerId === centerId);
-}; 
+  await mockApiDelay(1500)
+  return mockServices.filter((service) => service.centerId === centerId)
+}

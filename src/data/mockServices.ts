@@ -1,4 +1,4 @@
-import { Service } from "@/types/Service";
+import { Service } from '@/types/Service'
 
 export const mockServices: Service[] = [
   {
@@ -7,7 +7,7 @@ export const mockServices: Service[] = [
     name: 'Classic Manicure',
     description: 'Basic nail care and polish application',
     duration: 45,
-    price: 35
+    price: 35,
   },
   {
     id: '2',
@@ -15,7 +15,7 @@ export const mockServices: Service[] = [
     name: 'Deluxe Facial',
     description: 'Deep cleansing facial with premium products',
     duration: 60,
-    price: 85
+    price: 85,
   },
   {
     id: '3',
@@ -23,7 +23,7 @@ export const mockServices: Service[] = [
     name: 'Haircut & Styling',
     description: 'Professional haircut and styling service',
     duration: 60,
-    price: 65
+    price: 65,
   },
   {
     id: '4',
@@ -31,7 +31,7 @@ export const mockServices: Service[] = [
     name: 'Full Body Massage',
     description: 'Relaxing full body massage with essential oils',
     duration: 90,
-    price: 120
+    price: 120,
   },
   {
     id: '5',
@@ -39,7 +39,7 @@ export const mockServices: Service[] = [
     name: 'Classic Manicure',
     description: 'Basic nail care and polish application',
     duration: 45,
-    price: 35
+    price: 35,
   },
   {
     id: '6',
@@ -47,6 +47,6 @@ export const mockServices: Service[] = [
     name: 'Deluxe Facial',
     description: 'Deep cleansing facial with premium products',
     duration: 60,
-    price: 85
-  }
-];
+    price: 85,
+  },
+]
