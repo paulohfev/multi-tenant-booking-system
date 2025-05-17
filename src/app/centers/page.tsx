@@ -1,9 +1,9 @@
 'use client'
 
 import { useEffect } from 'react'
+import BookingCard from '@/components/BookingCard'
 import CenterCard from '@/components/CenterCard'
 import LoadingSpinner from '@/components/LoadingSpinner'
-import BookingCard from '@/components/BookingCard'
 import { useBookingsStore } from '@/store/useBookingsStore'
 import { useCentersStore } from '@/store/useCentersStore'
 

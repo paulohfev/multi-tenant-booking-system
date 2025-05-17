@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField should match snapshot with min value 1`] = `
+<div>
+  <div>
+    <label
+      class="block text-sm font-medium text-gray-700"
+      for="test"
+    >
+      Test Label
+    </label>
+    <input
+      class="mt-1 block w-full rounded-md border-gray-300 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black"
+      id="test"
+      min="2024-03-21"
+      name="test"
+      required=""
+      type="date"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`InputField should match snapshot with required props 1`] = `
+<div>
+  <div>
+    <label
+      class="block text-sm font-medium text-gray-700"
+      for="test"
+    >
+      Test Label
+    </label>
+    <input
+      class="mt-1 block w-full rounded-md border-gray-300 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black"
+      id="test"
+      name="test"
+      required=""
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
