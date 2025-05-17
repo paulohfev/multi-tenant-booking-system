@@ -39,7 +39,7 @@ const BookingFormModal: React.FC<BookingFormModalProps> = ({
     try {
       await createBooking({
         ...formData,
-        serviceId: service.id,
+        serviceName: service.name,
       });
       showToast('Booking created successfully!', 'success');
       onClose();

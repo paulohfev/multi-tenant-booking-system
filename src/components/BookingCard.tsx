@@ -12,8 +12,11 @@ const BookingCard: React.FC<BookingCardProps> = ({ booking }) => {
         {booking.name}
       </h3>
       <p className="text-gray-600 mb-4">{booking.email}</p>
-      <p className="text-gray-600 mb-4">{formatDate(booking.date)}</p>
-      <p className="text-gray-600 mb-4">{booking.time}</p>
+
+      <footer className="flex justify-between items-center mt-4">
+        <p className="text-gray-600">{formatDate(booking.date)}</p>
+        <p className="text-gray-600">{booking.time}</p>
+      </footer>
     </div>
   )
 }
