@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { useCentersStore } from '@/store/useCentersStore';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import ServiceCard from '@/components/ServiceCard';
+import { showToast } from '@/utils/showToast';
 
 export default function CenterPage() {
   const { center: centerId } = useParams();

@@ -3,10 +3,9 @@ import { persist } from 'zustand/middleware';
 import { Booking } from '@/types/Booking';
 import { createBooking } from '@/services/bookings';
 
-interface BookingsState {
+type BookingsState = {
   bookings: Booking[];
   isLoading: boolean;
-  error: string | null;
   createBooking: (booking: Omit<Booking, 'id'>) => Promise<void>;
 }
 
@@ -15,10 +14,9 @@ export const useBookingsStore = create<BookingsState>()(
     (set) => ({
       bookings: [],
       isLoading: false,
-      error: null,
 
       createBooking: async (bookingData) => {
-        set({ isLoading: true, error: null });
+        set({ isLoading: true });
         try {
           const newBooking = await createBooking(bookingData);
           set((state) => ({
@@ -26,7 +24,8 @@ export const useBookingsStore = create<BookingsState>()(
             isLoading: false,
           }));
         } catch (error) {
-          set({ error: 'Failed to create booking', isLoading: false });
+          console.error(error);
+          set({ isLoading: false });
         }
       },
     }),

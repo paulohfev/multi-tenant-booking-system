@@ -24,7 +24,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         </div>
         <button 
           onClick={() => setIsModalOpen(true)}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200"
+          className="cursor-pointer w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200"
         >
           Book Now
         </button>
