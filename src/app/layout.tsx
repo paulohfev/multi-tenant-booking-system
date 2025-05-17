@@ -27,11 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 mt-24`}>
         <Navbar />
-        {children}
+
+        <main className="min-h-screen bg-gray-50">
+          {children}
+        </main>
+
         <ToastContainer />
       </body>
     </html>

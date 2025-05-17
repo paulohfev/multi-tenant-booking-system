@@ -41,14 +41,16 @@ export default function CentersPage() {
           <LoadingSpinner />
         </div>
       ) : (
-        <div className="max-w-7xl mx-auto mt-12">
-          <h1 className="text-3xl font-bold text-gray-900 mb-8">Bookings</h1>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {bookings.map((booking) => (
-              <BookingCard key={booking.id} booking={booking} />
-            ))}
+        bookings.length > 0 && (
+          <div className="max-w-7xl mx-auto mt-12">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Bookings</h1>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {bookings.map((booking) => (
+                <BookingCard key={booking.id} booking={booking} />
+              ))}
+            </div>
           </div>
-        </div>
+        )
       )}
     </div>
   );
