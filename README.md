@@ -38,6 +38,7 @@ The application will be available at `http://localhost:3000`.
 
 ### Testing
 - `npm test` - Run all tests
+- `npm run test -- -u` - Updates snapshot testing
 - `npm run test:watch` - Run tests in watch mode
 - `npm run test:coverage` - Run tests with coverage report
 
