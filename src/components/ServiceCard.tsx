@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Service } from "@/types/Service";
 import BookingFormModal from './BookingFormModal';
+import { Service } from "@/types/Service";
 
 export type ServiceCardProps = {
   service: Service;

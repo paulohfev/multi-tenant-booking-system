@@ -1,10 +1,11 @@
 import { useMemo, useState } from 'react';
-import { Service } from '@/types/Service';
-import InputField from './InputField';
 import { useBookingsStore } from '@/store/useBookingsStore';
 import { showToast } from '@/utils/showToast';
-import XIcon from './XIcon';
 import { getCurrentDate, getCurrentTime } from '@/utils/date';
+import { CreateBookingFormData } from '@/types/CreateBookingFormData';
+import { Service } from '@/types/Service';
+import InputField from './InputField';
+import XIcon from './XIcon';
 
 export type BookingFormModalProps = {
   service: Service;
@@ -12,19 +13,12 @@ export type BookingFormModalProps = {
   onClose: () => void;
 }
 
-export type FormData = {
-  name: string;
-  email: string;
-  date: string;
-  time: string;
-}
-
 const BookingFormModal: React.FC<BookingFormModalProps> = ({
   service,
   isOpen,
   onClose,
 }) => {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<CreateBookingFormData>({
     name: '',
     email: '',
     date: '',

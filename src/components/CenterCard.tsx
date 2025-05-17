@@ -1,6 +1,6 @@
-import { Center } from "@/types/Center";
 import Image from "next/image";
 import Link from "next/link";
+import { Center } from "@/types/Center";
 
 export type CenterCardProps = {
   center: Center;
