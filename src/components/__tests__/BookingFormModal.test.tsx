@@ -1,6 +1,12 @@
 import { render } from '@testing-library/react'
 import BookingFormModal from '../BookingFormModal'
 
+// Mock the date utility functions
+jest.mock('@/utils/date', () => ({
+  getCurrentDate: jest.fn().mockReturnValue('2024-03-21'),
+  getCurrentTime: jest.fn().mockReturnValue('14:30'),
+}))
+
 const mockService = {
   id: '1',
   centerId: '1',
